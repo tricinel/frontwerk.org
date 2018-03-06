@@ -8,13 +8,15 @@ import GithubFork from './GithubFork';
 
 import { InlineList } from '../Layout/List';
 
+import { breakpoints } from '../../layouts/theme';
+
 const HeaderContainer = styled.header`
   align-items: center;
   background-color: ${props => props.theme.primary};
   color: #fff;
   display: grid;
   grid-column-gap: 10px;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr 1fr;
   height: 60px;
   left: 0;
   position: fixed;
@@ -22,10 +24,8 @@ const HeaderContainer = styled.header`
   width: 100%;
 
   a,
-  span,
-  ul {
+  span {
     color: #fff;
-    display: block;
     text-align: center;
   }
 
@@ -36,10 +36,19 @@ const HeaderContainer = styled.header`
       color: ${props => props.theme.accent};
     }
   }
+
+  @media screen and (min-width: ${breakpoints.sm}px) {
+    grid-template-columns: 1fr auto 1fr;
+  }
 `;
 
 const RightInlineList = InlineList.extend`
-  text-align: right;
+  display: none;
+  text-align: center;
+
+  @media screen and (min-width: ${breakpoints.sm}px) {
+    display: inline-block;
+  }
 `;
 
 const Header = ({ metadata }) => (

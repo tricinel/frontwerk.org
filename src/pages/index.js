@@ -16,17 +16,31 @@ import stylelintExample from '../content/examples/stylelint';
 import babelExample from '../content/examples/babel';
 import webpackExample from '../content/examples/webpack';
 
+import { breakpoints } from '../layouts/theme';
+
 import logo from '../assets/logo-on-dark.png';
 
 const Box = styled.div`
-  padding: 20px 0;
+  padding: 10px 0;
+
+  @media screen and (min-width: ${breakpoints.sm}px) {
+    padding: 20px 0;
+  }
 `;
 
 const CodeBox = Box.extend`
-  margin-top: 20px;
+  @media screen and (min-width: ${breakpoints.sm}px) {
+    margin-top: 20px;
+  }
 `;
 
-const gridRowTemplate = '440px 1fr';
+const gridRowTemplate = '1fr minmax(440px, 1fr)';
+
+const ExampleGrid = ({ children }) => (
+  <Grid template="1fr" templatemd={gridRowTemplate} gap={30}>
+    {children}
+  </Grid>
+);
 
 const IndexPage = () => (
   <div>
@@ -35,7 +49,7 @@ const IndexPage = () => (
       <h1>Frontwerk</h1>
       <h2>A CLI toolbox for common scripts for frontend projects</h2>
       <InlineList>
-        <li style={{ textAlign: 'center' }}>
+        <li style={{ textAlign: 'center', marginBottom: 10 }}>
           <Button
             type="primary"
             onClick={() => navigateTo('/docs/quick-start')}
@@ -43,7 +57,7 @@ const IndexPage = () => (
             Get started
           </Button>
         </li>
-        <li style={{ textAlign: 'center' }}>
+        <li style={{ textAlign: 'center', marginBottom: 10 }}>
           <Button type="secondary" onClick={() => navigateTo('/docs/')}>
             Documentation
           </Button>
@@ -51,7 +65,7 @@ const IndexPage = () => (
       </InlineList>
     </Hero>
     <MainContainer size={1170}>
-      <Grid template="1fr 1fr 1fr" gap={30}>
+      <Grid template="1fr" templatemd="1fr 1fr 1fr" gap={30}>
         <Box>
           <h3>Modern Frontend Toolset</h3>
           <p>
@@ -88,7 +102,7 @@ const IndexPage = () => (
 
     <MainContainer size={1170}>
       <Grid template="1fr" gap={10}>
-        <Grid template={gridRowTemplate} gap={30}>
+        <ExampleGrid>
           <Box>
             <h5>Test Javascript with Jest</h5>
             <p>
@@ -103,8 +117,8 @@ const IndexPage = () => (
           <CodeBox>
             <CodeView code={jestExample} language="bash" />
           </CodeBox>
-        </Grid>
-        <Grid template={gridRowTemplate} gap={30}>
+        </ExampleGrid>
+        <ExampleGrid>
           <Box>
             <h5>Lint Javascript with ESLint</h5>
             <p>
@@ -120,8 +134,8 @@ const IndexPage = () => (
           <CodeBox>
             <CodeView code={eslintExample} language="bash" />
           </CodeBox>
-        </Grid>
-        <Grid template={gridRowTemplate} gap={30}>
+        </ExampleGrid>
+        <ExampleGrid>
           <Box>
             <h5>Format your code with Prettier</h5>
             <p>
@@ -137,8 +151,8 @@ const IndexPage = () => (
           <CodeBox>
             <CodeView code={prettierExample} language="bash" />
           </CodeBox>
-        </Grid>
-        <Grid template={gridRowTemplate} gap={30}>
+        </ExampleGrid>
+        <ExampleGrid>
           <Box>
             <h5>Lint your CSS with Stylelint</h5>
             <p>
@@ -154,8 +168,8 @@ const IndexPage = () => (
           <CodeBox>
             <CodeView code={stylelintExample} language="bash" />
           </CodeBox>
-        </Grid>
-        <Grid template={gridRowTemplate} gap={30}>
+        </ExampleGrid>
+        <ExampleGrid>
           <Box>
             <h5>Compile Javascript with Babel</h5>
             <p>
@@ -172,8 +186,8 @@ const IndexPage = () => (
           <CodeBox>
             <CodeView code={babelExample} language="bash" />
           </CodeBox>
-        </Grid>
-        <Grid template={gridRowTemplate} gap={30}>
+        </ExampleGrid>
+        <ExampleGrid>
           <Box>
             <h5>Bundle your app with Webpack or Rollup</h5>
             <p>
@@ -190,12 +204,12 @@ const IndexPage = () => (
           <CodeBox>
             <CodeView code={webpackExample} language="bash" />
           </CodeBox>
-        </Grid>
+        </ExampleGrid>
       </Grid>
     </MainContainer>
 
     <Hero>
-      <p>It only takes 5 minutes to start.</p>
+      <h6>It only takes 5 minutes to start.</h6>
       <Button type="primary" onClick={() => navigateTo('/docs/quick-start')}>
         Get started
       </Button>

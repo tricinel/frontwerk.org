@@ -9,7 +9,7 @@ pre[class*='language-'] {
   color: #a9bcd0;
   background: none;
   text-align: left;
-  white-space: pre;
+  white-space: pre-wrap;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
@@ -35,7 +35,7 @@ pre[class*='language-'] {
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  background: #081A20;
+  background: #081a20;
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -50,11 +50,11 @@ pre[class*='language-'] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #27667D;
+  color: #27667d;
 }
 
 .token.punctuation {
-  color: #A9BCD0;
+  color: #a9bcd0;
 }
 
 .namespace {

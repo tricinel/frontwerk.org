@@ -33,6 +33,13 @@ const buttons = {
   }
 };
 
+const breakpoints = {
+  xs: 640,
+  sm: 768,
+  md: 992,
+  lg: 1500
+};
+
 const typography = {
   baseFontSize: '18px',
   baseLineHeight: 1.625,
@@ -134,6 +141,6 @@ const typography = {
   })
 };
 
-export { typography, buttons };
+export { typography, buttons, breakpoints };
 
 export default theme;

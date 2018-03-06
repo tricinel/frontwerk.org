@@ -13,6 +13,7 @@ const Hero = styled.section`
   h5,
   h6 {
     border: 0;
+    color: #fff;
     margin-bottom: 20px;
     margin-top: 20px;
     padding-bottom: 0;

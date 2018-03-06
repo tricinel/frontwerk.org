@@ -9,4 +9,13 @@ const Logo = styled.img`
   vertical-align: middle;
 `;
 
+const GithubIcon = styled.img`
+  display: inline-block;
+  height: 24px;
+  max-width: 100%;
+  vertical-align: middle;
+`;
+
+export { GithubIcon };
+
 export default Logo;

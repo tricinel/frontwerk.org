@@ -12,12 +12,13 @@ const DocLink = ({ doc: { frontmatter: { path, title } } }) => (
 );
 
 const getDocsList = edges =>
-  edges.map(({ node }) => <DocLink key={node.id} doc={node} />);
+  edges.map(({ node }) => <DocLink key={node.frontmatter.path} doc={node} />);
+
 const parseDocsList = groups => {
   const html = [];
   Object.keys(groups).forEach(sectionTitle => {
     html.push(
-      <SidebarGroup>
+      <SidebarGroup key={sectionTitle}>
         <SidebarSectionTitle>{sectionTitle}</SidebarSectionTitle>
         {getDocsList(groups[sectionTitle])}
       </SidebarGroup>

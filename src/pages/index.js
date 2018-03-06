@@ -7,11 +7,23 @@ import MainContainer from '../components/Layout/MainContainer';
 import Grid from '../components/Layout/Grid';
 import { InlineList } from '../components/Layout/List';
 import Button from '../components/Button';
+import CodeView from '../components/CodeView';
+
+import jestExample from '../content/examples/jest';
+import eslintExample from '../content/examples/eslint';
+import prettierExample from '../content/examples/prettier';
+import stylelintExample from '../content/examples/stylelint';
+import babelExample from '../content/examples/babel';
+import webpackExample from '../content/examples/webpack';
 
 import logo from '../assets/logo-on-dark.png';
 
 const Box = styled.div`
   padding: 20px 0;
+`;
+
+const CodeBox = Box.extend`
+  margin-top: 20px;
 `;
 
 const gridRowTemplate = '440px 1fr';
@@ -88,6 +100,9 @@ const IndexPage = () => (
               <Link to="/docs/test">Testing with Jest</Link>
             </p>
           </Box>
+          <CodeBox>
+            <CodeView code={jestExample} language="bash" />
+          </CodeBox>
         </Grid>
         <Grid template={gridRowTemplate} gap={30}>
           <Box>
@@ -102,6 +117,9 @@ const IndexPage = () => (
               <Link to="/docs/lint">Linting with ESLint</Link>
             </p>
           </Box>
+          <CodeBox>
+            <CodeView code={eslintExample} language="bash" />
+          </CodeBox>
         </Grid>
         <Grid template={gridRowTemplate} gap={30}>
           <Box>
@@ -116,6 +134,9 @@ const IndexPage = () => (
               <Link to="/docs/format">Formatting with Prettier</Link>
             </p>
           </Box>
+          <CodeBox>
+            <CodeView code={prettierExample} language="bash" />
+          </CodeBox>
         </Grid>
         <Grid template={gridRowTemplate} gap={30}>
           <Box>
@@ -130,6 +151,9 @@ const IndexPage = () => (
               <Link to="/docs/stylelint">Linting CSS with Stylelint</Link>
             </p>
           </Box>
+          <CodeBox>
+            <CodeView code={stylelintExample} language="bash" />
+          </CodeBox>
         </Grid>
         <Grid template={gridRowTemplate} gap={30}>
           <Box>
@@ -145,6 +169,9 @@ const IndexPage = () => (
               <Link to="/docs/babel">Compiling JS with BabelJS</Link>
             </p>
           </Box>
+          <CodeBox>
+            <CodeView code={babelExample} language="bash" />
+          </CodeBox>
         </Grid>
         <Grid template={gridRowTemplate} gap={30}>
           <Box>
@@ -160,6 +187,9 @@ const IndexPage = () => (
               <Link to="/docs/build">Bundling with Webpack or RollupJS</Link>
             </p>
           </Box>
+          <CodeBox>
+            <CodeView code={webpackExample} language="bash" />
+          </CodeBox>
         </Grid>
       </Grid>
     </MainContainer>

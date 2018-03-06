@@ -1,13 +1,15 @@
 const theme = {
-  primary: '#e84855',
-  accent: '#f0f3bd',
-  body: '#fafafa',
+  primary: '#10bc9b',
+  secondary: '#34485e',
+  accent: '#f7f9f9',
+  accentDarker: '#e6f2f2',
+  body: '#fffdf7',
   bodyColor: '#003049',
-  banner: '#003049',
+  banner: '#34485e',
   bannerColor: '#f2ffff',
-  linkColor: '#e84855',
-  linkHoverColor: '#003049',
-  sidebarBg: '#f5fbef',
+  linkColor: '#10bc9b',
+  linkHoverColor: '#34485e',
+  sidebarBg: '#fff',
   gray: '#605c4e',
   lightGray: '#d0dbdb',
   transition: 'all .3s ease'
@@ -15,19 +17,19 @@ const theme = {
 
 const buttons = {
   default: {
-    bg: '#003049',
-    border: '#003049',
+    bg: theme.secondary,
+    border: theme.secondary,
     color: '#f2ffff'
   },
   primary: {
-    bg: '#e84855',
+    bg: theme.primary,
     border: 'transparent',
-    color: '#f0f3bd'
+    color: theme.accent
   },
   secondary: {
-    bg: '#003049',
-    border: '#f0f3bd',
-    color: '#f0f3bd'
+    bg: theme.secondary,
+    border: '#00fddc',
+    color: '#00fddc'
   }
 };
 
@@ -93,21 +95,23 @@ const typography = {
       color: theme.linkHoverColor
     },
     h1: {
+      color: theme.primary,
       fontSize: '2.4rem',
       marginBottom: rhythm(1),
       marginTop: rhythm(1)
     },
     'h2,h3,h4,h5,h6': {
       borderBottom: `1px solid ${theme.lightGray}`,
+      color: theme.secondary,
       fontSize: '1.4rem',
       marginBottom: rhythm(1),
-      marginTop: rhythm(3),
+      marginTop: rhythm(1),
       paddingBottom: rhythm(1 / 2)
     },
     blockquote: {
       borderLeft: `5px solid ${theme.primary}`,
       borderRadius: '4px',
-      backgroundColor: '#e6f2f2',
+      backgroundColor: theme.accentDarker,
       color: theme.gray,
       marginLeft: 0,
       marginBottom: '20px',
@@ -119,8 +123,8 @@ const typography = {
       paddingTop: '5px'
     },
     'p>code,li>code': {
-      backgroundColor: '#fcfff7',
-      color: '#805330',
+      backgroundColor: theme.accent,
+      color: theme.secondary,
       fontSize: '1rem',
       padding: '2px 4px'
     },

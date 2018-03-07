@@ -17,7 +17,7 @@ Frontwerk assumes basic knowledge of the underlying tools used. These include [E
 
 ## Install Frontwerk
 
-This module is distributed via [npm][npm] which is bundled with [node][node] and should be installed as one of your project's `devDependencies` via either npm:
+This module is distributed via [npm][npm] and should be installed as one of your project's `devDependencies` via either npm:
 
 ```bash
 npm install frontwerk --save-dev
@@ -46,21 +46,21 @@ You can then simply ammend your `package.json`'s `scripts` property to include t
   "scripts": {
     "lint:js": "frontwerk lint",
     "lint:css": "frontwerk stylelint",
+    "format": "frontwerk format",
     "test": "frontwerk test --no-watch",
     "test:watch": "frontwerk test",
-    "build": "frontwerk build",
-    "format": "frontwerk format"
+    "build": "frontwerk build"
   }
 }
 ```
 
 #### Overriding the configuration
 
-Although it works out of the box, Frontwerk allows you to specify your own config for the various scripts, either by extending the config provided or just by using your own, depending on the script. Frontwerk respects the convention used by each of its underlying tools (eslint, stylelint, flow, etc.). Basically, if it's possible with that tool, it's possible with frontwerk.
+Although it works out of the box, Frontwerk allows you to specify your own configuration for the various scripts, either by extending the config files provided or just by using your own, depending on the script. Frontwerk respects the convention used by each of its underlying tools (eslint, stylelint, prettier, etc.). Basically, if it's possible with that tool, it's possible with frontwerk.
 
 You can find more extensive documentation about each tool in this guide.
 
-[Guides: Linting Javascript][guides-linting]
+[Next up: Linting Javascript][linting-javascript]
 
 [npm]: https://www.npmjs.com/
 [yarn]: https://yarnpkg.com/
@@ -72,4 +72,4 @@ You can find more extensive documentation about each tool in this guide.
 [babel]: https://babeljs.io/
 [webpack]: https://webpack.js.org/
 [rollup]: https://rollupjs.org/
-[guides-linting]: /docs/code-linting
+[linting-javascript]: /docs/lint

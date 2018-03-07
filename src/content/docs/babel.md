@@ -62,7 +62,7 @@ You can have certain files be ignored by BabelJS. By default, files inside the f
 You can override this default by passing an `--ignore` flag with your build command.
 
 ```bash
-frontwerk build --ignore folder
+frontwerk build --ignore [folder]
 ```
 
 **Files to compile**
@@ -70,7 +70,7 @@ frontwerk build --ignore folder
 Frontwerk assumes it will compile everything in the `src` directory. You can override this by passing the individual files to compile.
 
 ```bash
-frontwerk build files
+frontwerk build [files]
 ```
 
 **Destination directory**
@@ -78,7 +78,7 @@ frontwerk build files
 Frontwerk assumes your destination directory is `dist`. You can override this by passing the `--out-dir` flag.
 
 ```bash
-frontwerk build --out-dir folder
+frontwerk build --out-dir [folder]
 ```
 
 **CLI options**
@@ -88,5 +88,8 @@ There are a couple of other sensible defaults that you can override:
 * `--no-copy-files` will not copy files that will not be compiled
 * `--no-clean` will not clean the `dist` directory before compiling
 
+[Next up: Building with Webpack][webpack]
+
 [babel]: https://babeljs.io/
 [babelrc]: https://babeljs.io/docs/usage/babelrc
+[webpack]: /docs/webpack

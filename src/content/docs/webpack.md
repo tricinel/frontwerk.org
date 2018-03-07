@@ -138,7 +138,7 @@ frontwerk build --pack --entry source/main.js
 Frontwerk assumes your destination directory is `dist`. You can override this by passing the `--output-path` flag.
 
 ```bash
-frontwerk build --pack --output-path folder
+frontwerk build --pack --output-path [folder]
 ```
 
 **CLI options**
@@ -148,5 +148,8 @@ There are a couple of other sensible defaults that you can override:
 * `--watch` will watch the files for changes and rebundle as needed
 * `--no-clean` will not clean the `dist` directory before bundling
 
+[Next up: Building with Rollup][rollup]
+
 [webpack]: https://webpack.js.org/
 [webpack-config]: https://webpack.js.org/concepts/configuration/
+[rollup]: /docs/rollup

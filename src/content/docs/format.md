@@ -123,4 +123,7 @@ override this behavior as well:
 }
 ```
 
+[Next up: Bundling your code][build-basics]
+
 [prettier]: https://prettier.io/
+[build-basics]: /docs/build

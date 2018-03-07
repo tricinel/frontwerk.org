@@ -59,7 +59,7 @@ By default, Frontwerk will use the following jest rules:
 
 You can easily extend the configuration of this default config.
 
-> Note that any args you pass to `frontwerk test` will be forwarded to jest.
+> Note that any args you pass to `frontwerk test` will be forwarded to Jest.
 
 **Config**
 
@@ -77,7 +77,7 @@ module.exports = Object.assign(jestConfig, {
 });
 ```
 
-And then pass a `--config` flag to your `frontwerk jest` task with a path to a file to use as a configuration file.
+And then pass a `--config` flag to your `frontwerk test` task with a path to a file to use as a configuration file.
 
 ```json
 {
@@ -95,6 +95,9 @@ There are a few CLI flags you can use:
 * `--coverage` will display a coverage report and also override `watch`.
 * `--updateSnapshot` will update snapshots and also override `watch`.
 
-> Please note that Jest watch will not work if the project you are working on is not under version control. `--watch` automatically passes the `--onlyChanged` under the hood and that will require either a git or hg repo.
+> Please note that Jest watch will not work if the project you are working on is not under version control. `--watch` automatically passes the `--onlyChanged` flag under the hood and that will require either a git or hg repo.
+
+[Next up: Code formatting][code-formatting]
 
 [jest]: https://facebook.github.io/jest/
+[code-formatting]: /docs/format

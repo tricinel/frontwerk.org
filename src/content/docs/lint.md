@@ -19,7 +19,7 @@ You can run the following command and have ESLint lint your Javascript.
 frontwerk lint
 ```
 
-> The above command will format every `js` in your root, recursively, **including** any files inside `node_modules`. It is advisable to create a `.eslintignore` file in your project root and exclude `node_modules` at least.
+> The above command will format every `js` in your root, recursively, **including** any files inside `node_modules`. It is advisable to create a `.eslintignore` file in your project root and exclude at least `node_modules`.
 
 By default, Frontwerk will use the following ESLint presets and plugins:
 
@@ -129,6 +129,8 @@ By default, Frontwerk will use cache and store the info about processed files in
 }
 ```
 
+[Next up: Linting CSS][linting-css]
+
 [eslint]: https://eslint.org/
 [eslint-config-airbnb]: https://www.npmjs.com/package/eslint-config-airbnb
 [eslint-config-airbnb-base]: https://www.npmjs.com/package/eslint-config-airbnb-base
@@ -137,3 +139,4 @@ By default, Frontwerk will use cache and store the info about processed files in
 [eslint-plugin-import]: https://www.npmjs.com/package/eslint-plugin-import
 [eslint-plugin-react]: https://www.npmjs.com/package/eslint-plugin-react
 [eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y
+[linting-css]: /docs/stylelint

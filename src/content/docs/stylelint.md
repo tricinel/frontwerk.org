@@ -13,7 +13,7 @@ Frontwerk uses [Stylelint][stylelint] under the hood to lint your CSS/SCSS files
 
 ## Default configuration
 
-You can run the following command and have ESLint lint your style files.
+You can run the following command and have Stylelint lint your style files.
 
 ```bash
 frontwerk stylelint
@@ -123,5 +123,8 @@ override this behavior as well:
 }
 ```
 
+[Next up: Testing Javascript][testing]
+
 [stylelint]: https://stylelint.io/
 [stylelint-config-standard]: https://www.npmjs.com/package/stylelint-config-standard
+[testing]: /docs/test

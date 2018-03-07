@@ -8,6 +8,7 @@ import Grid from '../components/Layout/Grid';
 import { InlineList } from '../components/Layout/List';
 import Button from '../components/Button';
 import CodeView from '../components/CodeView';
+import Footer from '../components/Footer';
 
 import jestExample from '../content/examples/jest';
 import eslintExample from '../content/examples/eslint';
@@ -79,8 +80,8 @@ const IndexPage = () => (
           <h3>Extensible</h3>
           <p>
             Frontwerk has been designed from the ground up to be easy to extend
-            and even completely replace the configuration of any of the tools
-            without having to give up the benefits of the toolset.
+            its tools configurations or even completely replace them without
+            having to give up the benefits of the toolset itself.
           </p>
         </Box>
         <Box>
@@ -122,7 +123,7 @@ const IndexPage = () => (
           <Box>
             <h5>Lint Javascript with ESLint</h5>
             <p>
-              Frontwerk will enfore code styles and standards via
+              Frontwerk will enfore code styles and standards via{' '}
               <strong>ESLint</strong>, coupled with widely used and accepted
               presets, such as AirBnB&apos;s styleguide, Prettier and
               accessibility.
@@ -214,6 +215,15 @@ const IndexPage = () => (
         Get started
       </Button>
     </Hero>
+
+    <MainContainer>
+      <Footer>
+        <p>
+          Made with ❤ by <a href="http://bogdanlazar.com">@tricinel</a>.<br/>
+          Released under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.
+        </p>
+      </Footer>
+    </MainContainer>
   </div>
 );
 

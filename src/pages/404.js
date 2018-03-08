@@ -1,12 +1,28 @@
 import React from 'react';
+import Link from 'gatsby-link';
 
 import MainContainer from '../components/Layout/MainContainer';
+import Hero from '../components/Hero';
 
 const NotFoundPage = () => (
-  <MainContainer>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </MainContainer>
+  <div>
+    <Hero>
+      <h1>Yes! You&apos;ve found it!</h1>
+      <p>The one page not working properly, and you&apos;ve found it!</p>
+    </Hero>
+    <MainContainer style={{ textAlign: 'center' }}>
+      <h2>What did I win you ask?</h2>
+      <p>
+        Nothing...you&apos;ve won nothing{' '}
+        <span role="img" aria-label="sad face">
+          😞
+        </span>
+      </p>
+      <p>
+        <Link to="/">Go back to homepage</Link> and start again.
+      </p>
+    </MainContainer>
+  </div>
 );
 
 export default NotFoundPage;

@@ -219,8 +219,9 @@ const IndexPage = () => (
     <MainContainer>
       <Footer>
         <p>
-          Made with ❤ by <a href="http://bogdanlazar.com">@tricinel</a>.<br/>
-          Released under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.
+          Made with ❤ by <a href="http://bogdanlazar.com">@tricinel</a>.<br />
+          Released under the{' '}
+          <a href="https://opensource.org/licenses/MIT">MIT License</a>.
         </p>
       </Footer>
     </MainContainer>

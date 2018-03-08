@@ -12,24 +12,24 @@ class DocumentationWrapper extends Component {
     showContent: true
   };
 
-  componentWillMount() {
-    this.updateStateWithWidth();
-    window.addEventListener('resize', this.updateStateWithWidth);
+  componentDidMount() {
+    const updateStateWithWidth = () => {
+      const w = window;
+      const d = document;
+      const b = d.getElementsByTagName('body')[0];
+
+      const width =
+        w.innerWidth || d.documentElement.clientWidth || b.clientWidth;
+
+      this.setState({
+        showSidebar: width > breakpoints.sm,
+        showContent: true
+      });
+    };
+
+    updateStateWithWidth();
+    window.addEventListener('resize', updateStateWithWidth);
   }
-
-  updateStateWithWidth = () => {
-    const w = window;
-    const d = document;
-    const b = d.getElementsByTagName('body')[0];
-
-    const width =
-      w.innerWidth || d.documentElement.clientWidth || b.clientWidth;
-
-    this.setState({
-      showSidebar: width > breakpoints.sm,
-      showContent: true
-    });
-  };
 
   handleToggle = () => {
     this.setState({

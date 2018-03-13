@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { GithubIcon } from '../Logo';
-import logo from '../../assets/GitHub-Mark-Light-64px.png';
+import logo from '../../../static/GitHub-Mark-Light-64px.png';
 
 const GithubFork = ({ link }) => (
   <a href={link}>

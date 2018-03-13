@@ -19,7 +19,7 @@ import webpackExample from '../content/examples/webpack';
 
 import { breakpoints } from '../layouts/theme';
 
-import logo from '../assets/logo-on-dark.png';
+import logo from '../../static/logo-on-dark.png';
 
 const Box = styled.div`
   padding: 10px 0;

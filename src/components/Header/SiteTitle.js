@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 
 import Logo from '../Logo';
 
-import logo from '../../assets/logo-small.png';
+import logo from '../../../static/logo-small.png';
 
 const SiteTitle = ({ title }) => (
   <Link to="/">

@@ -26,7 +26,6 @@ const HeaderContainer = styled.header`
   a,
   span {
     color: #fff;
-    text-align: center;
   }
 
   a {
@@ -39,6 +38,10 @@ const HeaderContainer = styled.header`
 
   @media screen and (min-width: ${breakpoints.sm}px) {
     grid-template-columns: 1fr auto 1fr;
+
+    a {
+      text-align: center;
+    }
   }
 `;
 

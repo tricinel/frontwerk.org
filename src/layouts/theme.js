@@ -34,9 +34,9 @@ const buttons = {
 };
 
 const breakpoints = {
-  xs: 640,
-  sm: 768,
-  md: 992,
+  xs: 641,
+  sm: 769,
+  md: 993,
   lg: 1500
 };
 

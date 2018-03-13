@@ -10,6 +10,7 @@ const MainContainer = styled.main`
 
   @media screen and (min-width: ${breakpoints.sm}px) {
     margin: 30px auto;
+    max-width: ${props => (props.size ? props.size : 768)}px;
   }
 
   @media screen and (min-width: ${breakpoints.lg}px) {

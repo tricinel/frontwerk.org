@@ -10,12 +10,12 @@ import Button from '../components/Button';
 import CodeView from '../components/CodeView';
 import Footer from '../components/Footer';
 
-import jestExample from '../content/examples/jest';
-import eslintExample from '../content/examples/eslint';
-import prettierExample from '../content/examples/prettier';
-import stylelintExample from '../content/examples/stylelint';
-import babelExample from '../content/examples/babel';
-import webpackExample from '../content/examples/webpack';
+import jestExample from '../../content/examples/jest';
+import eslintExample from '../../content/examples/eslint';
+import prettierExample from '../../content/examples/prettier';
+import stylelintExample from '../../content/examples/stylelint';
+import babelExample from '../../content/examples/babel';
+import webpackExample from '../../content/examples/webpack';
 
 import { breakpoints } from '../layouts/theme';
 

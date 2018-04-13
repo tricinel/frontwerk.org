@@ -8,7 +8,9 @@ const MenuIcon = ({ size = 20 }) => (
     y="0px"
     width={size}
     height={size}
+    aria-labelledby="svgtitle-open-menu"
   >
+    <title id="svgtitle-open-menu">Open menu</title>
     <g transform="translate(-140.000000, -89.000000)">
       <path
         d="

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { breakpoints } from '../../layouts/theme';
 
-const MainContainer = styled.main`
+const MainContainer = styled.section`
   margin: 30px 0;
   max-width: ${props => (props.size ? props.size : 640)}px;
   padding: 0 20px;

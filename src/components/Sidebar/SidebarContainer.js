@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import SidebarSectionTitle from './SidebarSectionTitle';
 import SidebarGroup from './SidebarGroup';
 import SidebarToggle from './SidebarToggle';
+import SkipNavigation from '../Header/SkipNavigation';
 
 import theme from '../../layouts/theme';
 
@@ -58,8 +59,16 @@ const StyledContainer = styled.aside`
 const SidebarContainer = ({ edges, showSidebar, onToggle }) => (
   <div>
     <SidebarToggle isOpen={showSidebar} onPress={onToggle} />
-    <StyledContainer style={{ display: showSidebar ? 'block' : 'none' }}>
-      {parseDocsList(getGroupedDocsList(edges))}
+    <StyledContainer
+      style={{ display: showSidebar ? 'block' : 'none' }}
+      aria-label="Sidebar navigation"
+    >
+      <SkipNavigation href="#main" title="Skip to main content">
+        Skip to main content
+      </SkipNavigation>
+      <nav id="documentation-navigation" aria-label="Documentation">
+        {parseDocsList(getGroupedDocsList(edges))}
+      </nav>
     </StyledContainer>
   </div>
 );

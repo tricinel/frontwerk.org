@@ -4,7 +4,14 @@ const DocsPage = ({
   data: {
     gettingStartedDoc: { html }
   }
-}) => <section dangerouslySetInnerHTML={{ __html: html }} />;
+}) => (
+  <main
+    id="main"
+    tabIndex="-1"
+    aria-label="Main content"
+    dangerouslySetInnerHTML={{ __html: html }}
+  />
+);
 
 export default DocsPage;
 

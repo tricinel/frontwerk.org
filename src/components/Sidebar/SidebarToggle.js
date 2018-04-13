@@ -29,7 +29,7 @@ const Button = styled.button`
 `;
 
 const SidebarToggle = ({ isOpen, onPress }) => (
-  <Button onClick={onPress}>
+  <Button onClick={onPress} aria-label="Toggle sidebar">
     {!isOpen && <MenuIcon />}
     {isOpen && <CloseIcon />}
   </Button>

@@ -11,7 +11,12 @@ const Template = ({
   }
 }) => (
   <DocumentationWrapper docs={edges}>
-    <section dangerouslySetInnerHTML={{ __html: html }} />
+    <main
+      id="main"
+      tabIndex="-1"
+      aria-label="Main content"
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
     <DocumentationFooter>
       <p>Last updated: {frontmatter.date}</p>
     </DocumentationFooter>

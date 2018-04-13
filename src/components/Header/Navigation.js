@@ -14,14 +14,16 @@ const NavLinks = InlineList.extend`
 `;
 
 const Navigation = () => (
-  <NavLinks>
-    <li>
-      <Link to="/">Home</Link>
-    </li>
-    <li>
-      <Link to="/docs/">Docs</Link>
-    </li>
-  </NavLinks>
+  <nav id="main-navigation">
+    <NavLinks>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/docs/">Docs</Link>
+      </li>
+    </NavLinks>
+  </nav>
 );
 
 export default Navigation;

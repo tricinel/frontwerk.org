@@ -45,7 +45,7 @@ const ExampleGrid = ({ children }) => (
 
 const IndexPage = () => (
   <div>
-    <Hero large>
+    <Hero large role="banner">
       <img src={logo} alt="Frontwerk" />
       <h1>Frontwerk</h1>
       <h2>A CLI toolbox for common scripts for frontend projects</h2>
@@ -219,7 +219,14 @@ const IndexPage = () => (
     <MainContainer>
       <Footer>
         <p>
-          Made with ❤ by <a href="http://bogdanlazar.com">@tricinel</a>.<br />
+          Made with ❤ by{' '}
+          <a
+            title="Author website"
+            aria-label="Author website"
+            href="http://bogdanlazar.com"
+          >
+            @tricinel
+          </a>.<br />
           Released under the{' '}
           <a href="https://opensource.org/licenses/MIT">MIT License</a>.
         </p>

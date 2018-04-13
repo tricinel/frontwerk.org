@@ -8,7 +8,11 @@ import SidebarToggle from './SidebarToggle';
 
 import theme from '../../layouts/theme';
 
-const DocLink = ({ doc: { frontmatter: { path, title } } }) => (
+const DocLink = ({
+  doc: {
+    frontmatter: { path, title }
+  }
+}) => (
   <li>
     <Link to={path}>{title}</Link>
   </li>

@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "eslint-plugin-relay": "^0.0.21",
-    "frontwerk": "^1.0.4",
+    "frontwerk": "^1.1.0",
     "prettier": "^1.10.2"
   }
 }

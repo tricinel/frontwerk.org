@@ -14,7 +14,7 @@ const NavLinks = InlineList.extend`
 `;
 
 const Navigation = () => (
-  <nav id="main-navigation">
+  <nav id="main-navigation" aria-label="Top">
     <NavLinks>
       <li>
         <Link to="/">Home</Link>

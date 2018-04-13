@@ -44,7 +44,7 @@ const ExampleGrid = ({ children }) => (
 );
 
 const IndexPage = () => (
-  <div>
+  <main id="main" tabIndex="-1" aria-label="Main content">
     <Hero large role="banner">
       <img src={logo} alt="Frontwerk" />
       <h1>Frontwerk</h1>
@@ -232,7 +232,7 @@ const IndexPage = () => (
         </p>
       </Footer>
     </MainContainer>
-  </div>
+  </main>
 );
 
 export default IndexPage;

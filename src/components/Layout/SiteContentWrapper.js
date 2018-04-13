@@ -15,16 +15,14 @@ const SiteContentWrapper = ({ siteMetadata, children }) => (
       <Helmet
         title={siteMetadata.title}
         meta={[{ name: 'description', content: siteMetadata.description }]}
-      />
-      <SkipNavigation
-        id="skip-navigation"
-        href="#main"
-        title="Skip to main content"
       >
+        <html lang="en" />
+      </Helmet>
+      <SkipNavigation href="#main" title="Skip to main content">
         Skip to main content
       </SkipNavigation>
       <Header metadata={siteMetadata} />
-      <main id="#main">{children}</main>
+      {children}
     </div>
   </ThemeProvider>
 );

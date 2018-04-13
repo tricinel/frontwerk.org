@@ -4,7 +4,12 @@ import SiteContentWrapper from '../components/Layout/SiteContentWrapper';
 
 import SiteFragment from '../queries/Site';
 
-const TemplateWrapper = ({ data: { site: { siteMetadata } }, children }) => (
+const TemplateWrapper = ({
+  data: {
+    site: { siteMetadata }
+  },
+  children
+}) => (
   <SiteContentWrapper siteMetadata={siteMetadata}>
     {children()}
   </SiteContentWrapper>

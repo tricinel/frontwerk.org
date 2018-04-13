@@ -5,7 +5,10 @@ import DocumentationFooter from '../components/Layout/DocumentationFooter';
 import DocFragment from '../queries/Doc';
 
 const Template = ({
-  data: { allDocTitles: { edges }, docByPath: { frontmatter, html } }
+  data: {
+    allDocTitles: { edges },
+    docByPath: { frontmatter, html }
+  }
 }) => (
   <DocumentationWrapper docs={edges}>
     <section dangerouslySetInnerHTML={{ __html: html }} />

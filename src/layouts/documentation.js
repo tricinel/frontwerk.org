@@ -7,7 +7,10 @@ import DocFragment from '../queries/Doc';
 import SiteFragment from '../queries/Site';
 
 const TemplateWrapper = ({
-  data: { site: { siteMetadata }, allDocTitles: { edges } },
+  data: {
+    site: { siteMetadata },
+    allDocTitles: { edges }
+  },
   children
 }) => (
   <SiteContentWrapper siteMetadata={siteMetadata}>

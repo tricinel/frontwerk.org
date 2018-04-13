@@ -1,8 +1,10 @@
 import React from 'react';
 
-const DocsPage = ({ data: { gettingStartedDoc: { html } } }) => (
-  <section dangerouslySetInnerHTML={{ __html: html }} />
-);
+const DocsPage = ({
+  data: {
+    gettingStartedDoc: { html }
+  }
+}) => <section dangerouslySetInnerHTML={{ __html: html }} />;
 
 export default DocsPage;
 

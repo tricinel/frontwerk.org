@@ -1,10 +1,13 @@
+// @flow
+
 import React from 'react';
 import Link from 'gatsby-link';
+import type { Node } from 'react';
 
 import MainContainer from '../components/Layout/MainContainer';
 import Hero from '../components/Hero';
 
-const NotFoundPage = () => (
+const NotFoundPage = (): Node => (
   <div>
     <Hero>
       <h1>Yes! You&apos;ve found it!</h1>

@@ -1,5 +1,8 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
+import type { Node } from 'react';
 
 import theme from '../../layouts/theme';
 
@@ -10,6 +13,12 @@ const Wrapper = styled.footer`
   margin: 30px 0;
 `;
 
-const DocumentationFooter = ({ children }) => <Wrapper>{children}</Wrapper>;
+type Props = {
+  children: Node
+};
+
+const DocumentationFooter = ({ children }: Props): Node => (
+  <Wrapper>{children}</Wrapper>
+);
 
 export default DocumentationFooter;

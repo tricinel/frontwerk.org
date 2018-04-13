@@ -1,5 +1,8 @@
+// @flow
+
 import React from 'react';
 import Link from 'gatsby-link';
+import type { Node } from 'react';
 
 import { InlineList } from '../Layout/List';
 
@@ -13,7 +16,7 @@ const NavLinks = InlineList.extend`
   }
 `;
 
-const Navigation = () => (
+const Navigation = (): Node => (
   <nav id="main-navigation" aria-label="Top">
     <NavLinks>
       <li>

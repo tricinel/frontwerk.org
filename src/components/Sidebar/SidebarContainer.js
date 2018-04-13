@@ -1,28 +1,36 @@
+// @flow
+
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
+import type { Node } from 'react';
 
 import SidebarSectionTitle from './SidebarSectionTitle';
 import SidebarGroup from './SidebarGroup';
 import SidebarToggle from './SidebarToggle';
 import SkipNavigation from '../Header/SkipNavigation';
+import type { Edge, MarkdownNode } from '../../types';
 
 import theme from '../../layouts/theme';
+
+type DocLinkProps = {
+  doc: MarkdownNode
+};
 
 const DocLink = ({
   doc: {
     frontmatter: { path, title }
   }
-}) => (
+}: DocLinkProps): Node => (
   <li>
     <Link to={path}>{title}</Link>
   </li>
 );
 
-const getDocsList = edges =>
+const getDocsList = (edges: Array<Edge>): Array<Node> =>
   edges.map(({ node }) => <DocLink key={node.frontmatter.path} doc={node} />);
 
-const parseDocsList = groups => {
+const parseDocsList = (groups: Object): Array<Node> => {
   const html = [];
   Object.keys(groups).forEach(sectionTitle => {
     html.push(
@@ -35,7 +43,7 @@ const parseDocsList = groups => {
   return html;
 };
 
-const getGroupedDocsList = edges =>
+const getGroupedDocsList = (edges: Array<Edge>): Object =>
   edges.reduce((groups, edge) => {
     const { sectionTitle } = edge.node.frontmatter;
 
@@ -56,7 +64,17 @@ const StyledContainer = styled.aside`
   padding: 40px 20px;
 `;
 
-const SidebarContainer = ({ edges, showSidebar, onToggle }) => (
+type SidebarContainerProps = {
+  edges: Array<Edge>,
+  showSidebar: boolean,
+  onToggle: Function
+};
+
+const SidebarContainer = ({
+  edges,
+  showSidebar,
+  onToggle
+}: SidebarContainerProps): Node => (
   <div>
     <SidebarToggle isOpen={showSidebar} onPress={onToggle} />
     <StyledContainer

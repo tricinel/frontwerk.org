@@ -1,10 +1,21 @@
+// @flow
+
 import React from 'react';
+import type { Node } from 'react';
+
+import type { MarkdownNode } from '../types';
+
+type Props = {
+  data: {
+    gettingStartedDoc: MarkdownNode
+  }
+};
 
 const DocsPage = ({
   data: {
     gettingStartedDoc: { html }
   }
-}) => (
+}: Props): Node => (
   <main
     id="main"
     tabIndex="-1"

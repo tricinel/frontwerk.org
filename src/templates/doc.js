@@ -1,15 +1,29 @@
+// @flow
+
 import React from 'react';
+import type { Node } from 'react';
 
 import DocumentationWrapper from '../components/Layout/DocumentationWrapper';
 import DocumentationFooter from '../components/Layout/DocumentationFooter';
+import type { MarkdownNode, Edge } from '../types';
+
 import DocFragment from '../queries/Doc';
+
+type Props = {
+  data: {
+    allDocTitles: {
+      edges: Array<Edge>
+    },
+    docByPath: MarkdownNode
+  }
+};
 
 const Template = ({
   data: {
     allDocTitles: { edges },
     docByPath: { frontmatter, html }
   }
-}) => (
+}: Props): Node => (
   <DocumentationWrapper docs={edges}>
     <main
       id="main"

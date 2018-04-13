@@ -1,8 +1,19 @@
+// @flow
+
 import React, { Component } from 'react';
 
 import prism from '../../utils/prism';
 
-class CodeView extends Component {
+type Props = {
+  code: string,
+  language: string
+};
+
+type State = {
+  html: string
+};
+
+class CodeView extends Component<Props, State> {
   state = {
     html: ''
   };
@@ -12,7 +23,7 @@ class CodeView extends Component {
     this.setState({ html });
   }
 
-  componentWillReceiveProps({ code, language }) {
+  componentWillReceiveProps({ code, language }: Props) {
     if (code !== this.props.code || language !== this.props.language) {
       const html = prism(code, language);
       this.setState({ html });

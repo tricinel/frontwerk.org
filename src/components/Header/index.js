@@ -1,5 +1,8 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
+import type { Node } from 'react';
 
 import SiteTitle from './SiteTitle';
 import Navigation from './Navigation';
@@ -54,7 +57,15 @@ const RightInlineList = InlineList.extend`
   }
 `;
 
-const Header = ({ metadata }) => (
+type Props = {
+  metadata: {
+    title: string,
+    appVersion: string,
+    githubUrl: string
+  }
+};
+
+const Header = ({ metadata }: Props): Node => (
   <HeaderContainer>
     <SiteTitle title={metadata.title} />
     <Navigation />

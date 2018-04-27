@@ -1,6 +1,13 @@
-import React from 'react';
+// @flow
 
-const MenuIcon = ({ size = 20 }) => (
+import React from 'react';
+import type { Node } from 'react';
+
+type Props = {
+  size?: number
+};
+
+const MenuIcon = ({ size = 20 }: Props): Node => (
   <svg
     viewBox="0 0 249 249"
     version="1.1"
@@ -21,5 +28,9 @@ const MenuIcon = ({ size = 20 }) => (
     </g>
   </svg>
 );
+
+MenuIcon.defaultProps = {
+  size: 20
+};
 
 export default MenuIcon;

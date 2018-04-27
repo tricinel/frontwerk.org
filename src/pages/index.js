@@ -1,6 +1,9 @@
+// @flow
+
 import React from 'react';
 import Link, { navigateTo } from 'gatsby-link';
 import styled from 'styled-components';
+import type { Node } from 'react';
 
 import Hero from '../components/Hero';
 import MainContainer from '../components/Layout/MainContainer';
@@ -37,13 +40,17 @@ const CodeBox = Box.extend`
 
 const gridRowTemplate = '1fr minmax(440px, 1fr)';
 
-const ExampleGrid = ({ children }) => (
+type ExampleGridProps = {
+  children: Node
+};
+
+const ExampleGrid = ({ children }: ExampleGridProps): Node => (
   <Grid template="1fr" templatemd={gridRowTemplate} gap={30}>
     {children}
   </Grid>
 );
 
-const IndexPage = () => (
+const IndexPage = (): Node => (
   <main id="main" tabIndex="-1" aria-label="Main content">
     <Hero large role="banner">
       <img src={logo} alt="Frontwerk" />

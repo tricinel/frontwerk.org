@@ -1,5 +1,8 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
+import type { Node } from 'react';
 
 import MenuIcon from './MenuIcon';
 import CloseIcon from './CloseIcon';
@@ -28,7 +31,12 @@ const Button = styled.button`
   }
 `;
 
-const SidebarToggle = ({ isOpen, onPress }) => (
+type Props = {
+  isOpen: boolean,
+  onPress: Function
+};
+
+const SidebarToggle = ({ isOpen, onPress }: Props): Node => (
   <Button onClick={onPress} aria-label="Toggle sidebar">
     {!isOpen && <MenuIcon />}
     {isOpen && <CloseIcon />}

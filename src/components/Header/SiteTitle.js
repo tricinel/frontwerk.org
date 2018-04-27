@@ -1,11 +1,18 @@
+// @flow
+
 import React from 'react';
 import Link from 'gatsby-link';
+import type { Node } from 'react';
 
 import Logo from '../Logo';
 
 import logo from '../../../static/logo-small.png';
 
-const SiteTitle = ({ title }) => (
+type Props = {
+  title: string
+};
+
+const SiteTitle = ({ title }: Props): Node => (
   <Link to="/">
     <Logo src={logo} alt={title} /> {title}
   </Link>

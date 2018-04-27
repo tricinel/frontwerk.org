@@ -1,5 +1,12 @@
-import React from 'react';
+// @flow
 
-const AppInfo = ({ version }) => <span>v{version}</span>;
+import React from 'react';
+import type { Node } from 'react';
+
+type Props = {
+  version: string
+};
+
+const AppInfo = ({ version }: Props): Node => <span>v{version}</span>;
 
 export default AppInfo;

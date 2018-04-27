@@ -1,6 +1,13 @@
-import React from 'react';
+// @flow
 
-const CloseIcon = ({ size = 20 }) => (
+import React from 'react';
+import type { Node } from 'react';
+
+type Props = {
+  size?: number
+};
+
+const CloseIcon = ({ size = 20 }: Props): Node => (
   <svg
     viewBox="0 0 248 248"
     version="1.1"
@@ -19,5 +26,9 @@ const CloseIcon = ({ size = 20 }) => (
     </g>
   </svg>
 );
+
+CloseIcon.defaultProps = {
+  size: 20
+};
 
 export default CloseIcon;

@@ -1,4 +1,8 @@
+// @flow
+
 import React, { Component } from 'react';
+import type { Node } from 'react';
+import type { Edge } from '../../types';
 
 import Grid from './Grid';
 import SidebarContainer from '../Sidebar/SidebarContainer';
@@ -6,7 +10,17 @@ import MainContainer from './MainContainer';
 
 import { breakpoints } from '../../layouts/theme';
 
-class DocumentationWrapper extends Component {
+type Props = {
+  docs: Edge,
+  children: Node
+};
+
+type State = {
+  showSidebar: boolean,
+  showContent: boolean
+};
+
+class DocumentationWrapper extends Component<Props, State> {
   state = {
     showSidebar: false,
     showContent: true
@@ -18,6 +32,7 @@ class DocumentationWrapper extends Component {
       const d = document;
       const b = d.getElementsByTagName('body')[0];
 
+      // $FlowExpectedError
       return w.innerWidth || d.documentElement.clientWidth || b.clientWidth;
     };
 

@@ -1,6 +1,8 @@
+import styled from 'react-emotion';
+
 import { List } from '../Layout/List';
 
-const SidebarGroup = List.extend`
+const SidebarGroup = styled(List)`
   margin: 20px 0;
 
   :first-child {

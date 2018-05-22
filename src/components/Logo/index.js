@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
-const Logo = styled.img`
+const Logo = styled('img')`
   display: inline-block;
   height: 40px;
   margin-right: 10px;
@@ -9,7 +9,7 @@ const Logo = styled.img`
   vertical-align: middle;
 `;
 
-const GithubIcon = styled.img`
+const GithubIcon = styled('img')`
   display: inline-block;
   height: 24px;
   max-width: 100%;

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
-const SkipNavigation = styled.a`
+const SkipNavigation = styled('a')`
   clip: rect(0 0 0 0);
   height: 1px;
   overflow: hidden;

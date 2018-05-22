@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'gatsby-link';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import type { Node } from 'react';
 
 import SidebarSectionTitle from './SidebarSectionTitle';
@@ -56,7 +56,7 @@ const getGroupedDocsList = (edges: Array<Edge>): Object =>
     return groups;
   }, {});
 
-const StyledContainer = styled.aside`
+const StyledContainer = styled('aside')`
   background-color: ${theme.sidebarBg};
   box-shadow: inset -1px 0 2px rgba(0, 0, 0, 0.2);
   min-height: calc(100vh - 60px);

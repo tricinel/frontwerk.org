@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
-const Footer = styled.footer`
+const Footer = styled('footer')`
   text-align: center;
 
   p {

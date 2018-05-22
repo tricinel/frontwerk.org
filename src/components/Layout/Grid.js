@@ -1,6 +1,7 @@
 // @flow
 
-import styled, { css } from 'styled-components';
+import styled from 'react-emotion';
+import { css } from 'emotion';
 
 import { breakpoints } from '../../layouts/theme';
 
@@ -62,6 +63,13 @@ const responsive = (props: Props): Array<Function | number | string> | null =>
   props.templatemd ? media('md', props.templatemd, props) : null;
 
 // $FlowFixMe
-const Grid = styled.div([], { display: 'grid' }, size, gap, align, responsive);
+const Grid = styled('div')(
+  [],
+  { display: 'grid' },
+  size,
+  gap,
+  align,
+  responsive
+);
 
 export default Grid;

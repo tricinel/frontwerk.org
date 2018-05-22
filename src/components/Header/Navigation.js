@@ -2,13 +2,14 @@
 
 import React from 'react';
 import Link from 'gatsby-link';
+import styled from 'react-emotion';
 import type { Node } from 'react';
 
 import { InlineList } from '../Layout/List';
 
 import { breakpoints } from '../../layouts/theme';
 
-const NavLinks = InlineList.extend`
+const NavLinks = styled(InlineList)`
   text-align: right;
 
   @media screen and (min-width: ${breakpoints.sm}px) {

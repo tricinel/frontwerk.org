@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import { buttons } from '../../layouts/theme';
 
-const Button = styled.button`
+const Button = styled('button')`
   background-color: ${props => buttons[props.type ? props.type : 'default'].bg};
   border-radius: 4px;
   border: 1px solid

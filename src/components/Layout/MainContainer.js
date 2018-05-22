@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import { breakpoints } from '../../layouts/theme';
 
-const MainContainer = styled.section`
+const MainContainer = styled('section')`
   margin: 30px 0;
   max-width: ${props => (props.size ? props.size : 640)}px;
   padding: 0 20px;

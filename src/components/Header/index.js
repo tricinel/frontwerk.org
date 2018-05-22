@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import type { Node } from 'react';
 
 import SiteTitle from './SiteTitle';
@@ -13,7 +13,7 @@ import { InlineList } from '../Layout/List';
 
 import { breakpoints } from '../../layouts/theme';
 
-const HeaderContainer = styled.header`
+const HeaderContainer = styled('header')`
   align-items: center;
   background-color: ${props => props.theme.primary};
   color: #fff;
@@ -48,7 +48,7 @@ const HeaderContainer = styled.header`
   }
 `;
 
-const RightInlineList = InlineList.extend`
+const RightInlineList = styled(InlineList)`
   display: none;
   text-align: center;
 

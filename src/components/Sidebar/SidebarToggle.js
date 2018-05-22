@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import type { Node } from 'react';
 
 import MenuIcon from './MenuIcon';
@@ -9,7 +9,7 @@ import CloseIcon from './CloseIcon';
 
 import theme, { breakpoints } from '../../layouts/theme';
 
-const Button = styled.button`
+const Button = styled('button')`
   background-color: ${theme.primary};
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Helmet from 'react-helmet';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'emotion-theming';
 
 import theme from '../../layouts/theme';
 import '../../layouts/index.css';

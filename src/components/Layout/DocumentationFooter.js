@@ -1,12 +1,12 @@
 // @flow
 
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import type { Node } from 'react';
 
 import theme from '../../layouts/theme';
 
-const Wrapper = styled.footer`
+const Wrapper = styled('footer')`
   border-top: 1px solid ${theme.lightGray};
   font-size: 0.8rem;
   font-style: italic;

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link, { navigateTo } from 'gatsby-link';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import type { Node } from 'react';
 
 import Hero from '../components/Hero';
@@ -24,7 +24,7 @@ import { breakpoints } from '../layouts/theme';
 
 import logo from '../../static/logo-on-dark.png';
 
-const Box = styled.div`
+const Box = styled('div')`
   padding: 10px 0;
 
   @media screen and (min-width: ${breakpoints.sm}px) {
@@ -32,7 +32,7 @@ const Box = styled.div`
   }
 `;
 
-const CodeBox = Box.extend`
+const CodeBox = styled(Box)`
   @media screen and (min-width: ${breakpoints.sm}px) {
     margin-top: 20px;
   }

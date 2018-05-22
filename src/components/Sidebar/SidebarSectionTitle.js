@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import theme, { typography } from '../../layouts/theme';
 
-const SidebarSectionTitle = styled.li`
+const SidebarSectionTitle = styled('li')`
   color: ${theme.banner};
   font-size: calc(${typography.baseFontSize} * 0.8);
   margin-bottom: 20px !important;

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
-const InlineList = styled.ul`
+const InlineList = styled('ul')`
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@ const InlineList = styled.ul`
   }
 `;
 
-const List = styled.ul`
+const List = styled('ul')`
   display: block;
   margin: 0;
   padding: 0;

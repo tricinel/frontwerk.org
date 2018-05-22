@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
-const Hero = styled.section`
+const Hero = styled('section')`
   background-color: ${props => props.theme.banner};
   color: ${props => props.theme.bannerColor};
   padding: ${props => (props.large ? '100px' : '50px')} 0;

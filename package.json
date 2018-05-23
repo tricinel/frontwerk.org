@@ -1,7 +1,7 @@
 {
   "name": "@frontwerk/documentation",
   "description": "The documentation for Frontwerk",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Bogdan Lazar <bogdan@bogdanlazar.com>",
   "private": true,
   "dependencies": {
@@ -34,7 +34,7 @@
   "devDependencies": {
     "eslint-plugin-relay": "^0.0.21",
     "flow-bin": "^0.69.0",
-    "frontwerk": "^1.1.0",
+    "frontwerk": "^1.2.0",
     "prettier": "^1.10.2"
   }
 }

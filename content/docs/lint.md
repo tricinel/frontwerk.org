@@ -1,6 +1,6 @@
 ---
 path: '/docs/lint'
-date: '2018-02-16'
+date: '2018-05-23'
 title: 'Linting Javascript'
 sectionTitle: 'Tooling'
 section: 2
@@ -29,6 +29,7 @@ By default, Frontwerk will use the following ESLint presets and plugins:
 * [eslint-config-airbnb-base][eslint-config-airbnb-base] if your project does
   **not** use React
 * [eslint-config-prettier][eslint-config-prettier]
+* [eslint-plugin-jest:recommended][eslint-plugin-jest]
 
 **Plugins**
 
@@ -36,6 +37,7 @@ By default, Frontwerk will use the following ESLint presets and plugins:
 * [eslint-plugin-import][eslint-plugin-import] if your project uses React
 * [eslint-plugin-react][eslint-plugin-react] if your project uses React
 * [eslint-plugin-jsx-a11y][eslint-plugin-jsx-a11y] if your project uses React
+* [eslint-plugin-jest][eslint-plugin-jest]
 
 **Additional rules**
 
@@ -139,4 +141,5 @@ By default, Frontwerk will use cache and store the info about processed files in
 [eslint-plugin-import]: https://www.npmjs.com/package/eslint-plugin-import
 [eslint-plugin-react]: https://www.npmjs.com/package/eslint-plugin-react
 [eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y
+[eslint-plugin-jest]: https://www.npmjs.com/package/eslint-plugin-jest
 [linting-css]: /docs/stylelint

@@ -1,7 +1,7 @@
 {
   "name": "@frontwerk/documentation",
   "description": "The documentation for Frontwerk",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "author": "Bogdan Lazar <bogdan@bogdanlazar.com>",
   "private": true,
   "dependencies": {

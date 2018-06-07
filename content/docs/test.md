@@ -28,8 +28,8 @@ By default, Frontwerk will use the following jest rules:
   "roots": "src",
   "testEnvironment":
     "jsdom (if not using webpack or rollup or react) or node otherwise",
-  "collectCoverageFrom": ["src/**/*.js"],
-  "testMatch": ["**/__tests__/**/*.js"],
+  "collectCoverageFrom": ["src/**/*.+(js|jsx)"],
+  "testMatch": ["**/__tests__/**/*.+(js|jsx)"],
   "testPathIgnorePatterns": [
     "/node_modules/",
     "/fixtures/",
@@ -41,7 +41,8 @@ By default, Frontwerk will use the following jest rules:
     "/fixtures/",
     "/__tests__/helpers/",
     "__mocks__",
-    "src/(umd|cjs|esm)-entry.js$"
+    "src/(umd|cjs|esm)-entry.js$",
+    ".stories.js$"
   ],
   "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
   "coverageThreshold": {
@@ -51,7 +52,11 @@ By default, Frontwerk will use the following jest rules:
       "lines": 80,
       "statements": 80
     }
-  }
+  },
+  "watchPlugins": [
+    "jest-watch-typeahead/filename",
+    "jest-watch-typeahead/testname"
+  ]
 }
 ```
 

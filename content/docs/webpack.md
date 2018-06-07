@@ -21,91 +21,7 @@ frontwerk build --pack
 
 > The above command assumes you have structured your project to have a `src` folder where your Javascript lives and a `dist` folder where the compiled versions will be written to. Furthermore, your entry point is a `src/index.js` or `src/index.jsx` (if using React) file.
 
-By default, Webpack will use the following configuration:
-
-```javascript
-module.exports = {
-  entry: 'src/index.js',
-  output: {
-    filename: '[name].[hash].js',
-    path: 'dist'
-  },
-  resolve: {
-    exntensions: ['.js', '.jsx']
-  },
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      sourcemap: false,
-      compress: { drop_console: true }
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: module =>
-        module.context && module.context.indexOf('node_modules') !== -1
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest'
-    })
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        use: 'babel-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      },
-      {
-        test: /\.(woff2?|eot|ttf|svg)$/,
-        use: 'url-loader'
-      },
-      {
-        test: /\.(jpe?g|png|gif)$/i,
-        loaders: [
-          {
-            loader: 'file-loader',
-            options: {
-              hash: 'sha512',
-              digest: 'hex',
-              name: '[name]-[hash].[ext]'
-            }
-          },
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              gifsicle: {
-                interlaced: false
-              },
-              optipng: {
-                optimizationLevel: 7
-              },
-              pngquant: {
-                quality: '65-90',
-                speed: 4
-              },
-              mozjpeg: {
-                progressive: true,
-                quality: 65
-              }
-            }
-          }
-        ],
-        exclude: /node_modules/
-      }
-    ]
-  }
-};
-```
+By default, Webpack will use the configuration based on the `--mode` flag passed via the CLI (either `developmet` or `production`). You can browse the source code to see the [configuration][frontwerk-webpack-configuration] and the [plugins][frontwerk-webpack-plugins] used.
 
 ## Overriding the defaults
 
@@ -147,9 +63,12 @@ There are a couple of other sensible defaults that you can override:
 
 * `--watch` will watch the files for changes and rebundle as needed
 * `--no-clean` will not clean the `dist` directory before bundling
+* `--mode` will set the correct environment. Either `development` or `production`
 
 [Next up: Building with Rollup][rollup]
 
 [webpack]: https://webpack.js.org/
 [webpack-config]: https://webpack.js.org/concepts/configuration/
 [rollup]: /docs/rollup
+[frontwerk-webpack-configuration]: https://github.com/tricinel/frontwerk/blob/master/src/config/webpack.config.js
+[frontwerk-webpack-plugins]: https://github.com/tricinel/frontwerk/blob/master/src/config/webpack.utils.js

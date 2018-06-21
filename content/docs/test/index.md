@@ -1,5 +1,4 @@
 ---
-path: '/docs/test'
 date: '2018-02-16'
 title: 'Testing'
 sectionTitle: 'Tooling'

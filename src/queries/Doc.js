@@ -2,8 +2,10 @@
 export const query = graphql`
   fragment DocFragment on MarkdownRemark {
     id
+    fields {
+      slug
+    }
     frontmatter {
-      path
       title
       sectionTitle
     }

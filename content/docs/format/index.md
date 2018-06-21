@@ -1,5 +1,4 @@
 ---
-path: '/docs/format'
 date: '2018-02-20'
 title: 'Formatting'
 sectionTitle: 'Tooling'

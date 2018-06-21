@@ -40,7 +40,7 @@ const Template = ({
 export default Template;
 
 export const pageQuery = graphql`
-  query docByPath($path: String!) {
+  query docByPath($slug: String!) {
     allDocTitles: allMarkdownRemark(
       sort: {
         order: ASC
@@ -53,11 +53,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    docByPath: markdownRemark(frontmatter: { path: { eq: $path } }) {
+    docByPath: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        path
         title
       }
     }

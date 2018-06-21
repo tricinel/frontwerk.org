@@ -1,5 +1,4 @@
 ---
-path: '/docs/rollup'
 date: '2018-02-22'
 title: 'Rollup'
 sectionTitle: 'Build'

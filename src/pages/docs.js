@@ -29,13 +29,9 @@ export default DocsPage;
 export const pageQuery = graphql`
   query docsQuery {
     gettingStartedDoc: markdownRemark(
-      frontmatter: { path: { eq: "/docs/introduction" } }
+      fields: { slug: { eq: "docs/introduction/" } }
     ) {
       html
-      frontmatter {
-        path
-        title
-      }
     }
   }
 `;

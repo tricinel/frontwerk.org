@@ -1,5 +1,4 @@
 ---
-path: '/docs/quick-start'
 date: '2018-02-16'
 title: 'Getting started'
 sectionTitle: 'Essentials'

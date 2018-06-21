@@ -1,5 +1,4 @@
 ---
-path: '/docs/babel'
 date: '2018-02-22'
 title: 'BabelJS'
 sectionTitle: 'Build'

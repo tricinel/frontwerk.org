@@ -1,6 +1,8 @@
 export type MarkdownNode = {
+  fields: {
+    slug: string
+  },
   frontmatter: {
-    path: string,
     title: string
   },
   html: string

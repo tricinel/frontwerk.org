@@ -1,5 +1,4 @@
 ---
-path: '/docs/stylelint'
 date: '2018-02-20'
 title: 'Linting CSS'
 sectionTitle: 'Tooling'

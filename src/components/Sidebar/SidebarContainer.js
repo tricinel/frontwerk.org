@@ -12,6 +12,7 @@ import SkipNavigation from '../Header/SkipNavigation';
 import type { Edge, MarkdownNode } from '../../types';
 
 import theme from '../../layouts/theme';
+import formatSlug from '../../utils/formatSlug';
 
 type DocLinkProps = {
   doc: MarkdownNode
@@ -19,16 +20,17 @@ type DocLinkProps = {
 
 const DocLink = ({
   doc: {
-    frontmatter: { path, title }
+    fields: { slug },
+    frontmatter: { title }
   }
 }: DocLinkProps): Node => (
   <li>
-    <Link to={path}>{title}</Link>
+    <Link to={formatSlug(slug)}>{title}</Link>
   </li>
 );
 
 const getDocsList = (edges: Array<Edge>): Array<Node> =>
-  edges.map(({ node }) => <DocLink key={node.frontmatter.path} doc={node} />);
+  edges.map(({ node }) => <DocLink key={node.fields.slug} doc={node} />);
 
 const parseDocsList = (groups: Object): Array<Node> => {
   const html = [];

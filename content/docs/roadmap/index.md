@@ -1,5 +1,4 @@
 ---
-path: '/docs/roadmap'
 date: '2018-03-07'
 title: 'Coming up next'
 sectionTitle: 'Roadmap'

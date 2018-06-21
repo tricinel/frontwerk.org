@@ -1,5 +1,4 @@
 ---
-path: '/docs/lint'
 date: '2018-05-23'
 title: 'Linting Javascript'
 sectionTitle: 'Tooling'

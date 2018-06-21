@@ -11,8 +11,8 @@ module.exports = async ({ boundActionCreators: { createPage }, graphql }) =>
             allMarkdownRemark(limit: 100) {
               edges {
                 node {
-                  frontmatter {
-                    path
+                  fields {
+                    slug
                   }
                 }
               }
@@ -26,9 +26,25 @@ module.exports = async ({ boundActionCreators: { createPage }, graphql }) =>
 
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
           createPage({
-            path: node.frontmatter.path,
-            component: pageTemplate
+            path: node.fields.slug,
+            component: pageTemplate,
+            context: {
+              slug: node.fields.slug
+            }
           });
+          // const page = {
+          //   path: node.fields.slug,
+          //   component: pageTemplate,
+          //   context: {
+          //     slug: node.fields.slug
+          //   }
+          // };
+
+          // if (node.fields.slug.match(/^\/docs/)) {
+          //   page.layout = 'documentation';
+          // }
+
+          // createPage(page);
         });
       })
     );

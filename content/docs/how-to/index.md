@@ -1,5 +1,4 @@
 ---
-path: '/docs/how-to'
 date: '2018-03-07'
 title: 'How to'
 sectionTitle: 'FAQ'

@@ -6,7 +6,7 @@ import type { Node } from 'react';
 
 import Logo from '../Logo';
 
-import logo from '../../../static/logo-small.png';
+import logo from '../../assets/logo-small.png';
 
 type Props = {
   title: string

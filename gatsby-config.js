@@ -37,6 +37,15 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/assets`,
+        name: 'img'
+      }
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Frontwerk Docs',

@@ -4,7 +4,7 @@ import React from 'react';
 import type { Node } from 'react';
 
 import { GithubIcon } from '../Logo';
-import logo from '../../../static/GitHub-Mark-Light-64px.png';
+import logo from '../../assets/GitHub-Mark-Light-64px.png';
 
 type Props = {
   link: string

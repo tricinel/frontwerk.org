@@ -3,6 +3,7 @@
 import React from 'react';
 import Link, { navigateTo } from 'gatsby-link';
 import styled from 'react-emotion';
+import Img from 'gatsby-image';
 import type { Node } from 'react';
 
 import Hero from '../components/Hero';
@@ -22,7 +23,7 @@ import webpackExample from '../../content/examples/webpack';
 
 import { breakpoints } from '../layouts/theme';
 
-import logo from '../../static/logo-on-dark.png';
+// import logo from '../assets/logo-on-dark.png';
 
 const Box = styled('div')`
   padding: 10px 0;
@@ -50,10 +51,10 @@ const ExampleGrid = ({ children }: ExampleGridProps): Node => (
   </Grid>
 );
 
-const IndexPage = (): Node => (
+const IndexPage = ({ data: { logoImage } }): Node => (
   <main id="main" tabIndex="-1" aria-label="Main content">
     <Hero large role="banner">
-      <img src={logo} alt="Frontwerk" />
+      <Img resolutions={logoImage.resolutions} alt="Frontwerk" />
       <h1>Frontwerk</h1>
       <h2>A CLI toolbox for common scripts for frontend projects</h2>
       <InlineList>
@@ -243,3 +244,13 @@ const IndexPage = (): Node => (
 );
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query pagesQuery {
+    logoImage: imageSharp(id: { regex: "/logo-on-dark/" }) {
+      resolutions(width: 300) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+  }
+`;

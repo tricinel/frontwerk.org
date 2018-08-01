@@ -3,7 +3,7 @@ module.exports = {
     title: 'Frontwerk',
     siteUrl: 'https://frontwerk.github.io',
     description: 'A zeroconfiguration toolset for frontend development',
-    appVersion: '2.1.1',
+    appVersion: '2.1.2',
     githubUrl: 'https://github.com/tricinel/frontwerk'
   },
   plugins: [

@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'none'; font-src 'https://fonts.googleapis.com'; img-src 'self' *.frontwerk.org; object-src 'none'; script-src 'self' *.frontwerk.org; style-src 'self' *.frontwerk.org
+  Content-Security-Policy: default-src 'none'; font-src 'https://fonts.googleapis.com'; img-src 'self' data *.frontwerk.org; object-src 'none'; script-src 'self' *.frontwerk.org 'unsafe-inline'; style-src 'self' *.frontwerk.org 'unsafe-inline'
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff

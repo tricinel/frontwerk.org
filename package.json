@@ -37,9 +37,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "frontwerk format",
-    "lint": "frontwerk lint",
-    "test": "frontwerk test --no-watch"
+    "type-check": "tsc --noEmit"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",

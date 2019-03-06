@@ -56,7 +56,7 @@ const IndexPage: React.SFC = (): JSX.Element => (
       query pagesQuery {
         logoImage: file(relativePath: { eq: "logo-on-dark.png" }) {
           childImageSharp {
-            fixed(width: 300) {
+            fixed(width: 250) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }

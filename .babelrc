@@ -1,0 +1,13 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": ["last 2 versions"]
+      }
+    ],
+    "@babel/typescript",
+    "@babel/react"
+  ],
+  "plugins": ["@babel/proposal-class-properties"]
+}

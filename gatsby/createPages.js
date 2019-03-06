@@ -1,8 +1,8 @@
 const path = require('path');
 
-module.exports = async ({ boundActionCreators: { createPage }, graphql }) =>
+module.exports = async ({ actions: { createPage }, graphql }) =>
   new Promise((resolve, reject) => {
-    const pageTemplate = path.resolve('src/templates/doc.js');
+    const pageTemplate = path.resolve('src/templates/doc.tsx');
 
     resolve(
       graphql(

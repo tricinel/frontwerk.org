@@ -10,10 +10,11 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-emotion',
+    'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: 'src/layouts/typography.js'
+        pathToConfigModule: 'src/layouts/typography.ts'
       }
     },
     {
@@ -43,8 +44,8 @@ module.exports = {
         name: 'img'
       }
     },
-    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

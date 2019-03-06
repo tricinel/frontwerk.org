@@ -89,6 +89,10 @@ const typography = {
   boldWeight: 600,
   blockMarginBottom: 1 / 2,
   overrideStyles: ({ rhythm }) => ({
+    body: {
+      backgroundColor: theme.body,
+      marginTop: '60px'
+    },
     p: {
       marginBottom: 10,
       marginTop: 10
